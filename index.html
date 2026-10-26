@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Player</title>
+  <link rel="icon" href="images/album-1.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <section class="player">
+      <p class="logo">Mini Player</p>
+
+      <img id="album-image" class="album" src="images/album-1.svg" alt="Album cover">
+      <h1 id="song-title">Morning Light</h1>
+      <p id="artist-name">Luna Park</p>
+
+      <div class="progress-row">
+        <span id="current-time" class="time">0:00</span>
+        <input id="progress-bar" type="range" min="0" max="100" value="0" aria-label="Song progress">
+        <span id="total-time" class="time">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev-button" class="control" type="button" aria-label="Previous song">⏮</button>
+        <button id="play-button" class="control play" type="button" aria-label="Play">
+          <span id="play-icon">▶</span>
+        </button>
+        <button id="next-button" class="control" type="button" aria-label="Next song">⏭</button>
+      </div>
+
+      <label class="volume" for="volume-bar">
+        Volume
+        <input id="volume-bar" type="range" min="0" max="1" step="0.05" value="0.8">
+      </label>
+    </section>
+
+    <aside class="side">
+      <h2>Playlist</h2>
+      <p id="playlist-count"></p>
+      <ul id="playlist"></ul>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
